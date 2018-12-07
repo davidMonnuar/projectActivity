@@ -1,0 +1,350 @@
+body {
+  background-color: #F0F0F0;
+}
+body .button {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #428e92;
+  display: inline-block;
+  height: 36px;
+  padding: 0 26px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  background-image: none;
+  text-align: center;
+  line-height: 36px;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: inherit;
+  letter-spacing: 0.03em;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(../assets/roboto-regular.woff2) format('woff2'), url(../assets/roboto-regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+#header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  background-color: #00363a;
+  height: 50px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  font-family: 'Roboto-Regular', sans-serif;
+}
+#header span {
+  line-height: 50px;
+  font-size: 18px;
+  color: white;
+}
+#header #resetButton {
+  margin: 7px 0;
+  float: right;
+  background: #fff;
+  color: #006064;
+}
+#hostnameInfoContainer {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  font-family: 'Roboto-Regular', sans-serif;
+  margin-top: 20px;
+}
+#hostnameInfoContainer #hostnameInfo {
+  width: 250px;
+  height: 74px;
+  box-sizing: border-box;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  padding: 16px;
+  display: inline-block;
+  text-align: left;
+}
+#hostnameInfoContainer #hostnameInfo h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+#hostnameInfoContainer #hostnameInfo span {
+  color: grey;
+  font-size: 14px;
+}
+#contentContainer {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 20px;
+}
+#contentContainer #content {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+#contentContainer #content #tabContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #006064;
+}
+#contentContainer #content #tabContainer .tabLink {
+  box-sizing: border-box;
+  width: 50%;
+  height: 48px;
+  line-height: 48px;
+  color: #E1E2E1;
+  text-transform: uppercase;
+  font-family: 'Roboto-Regular', sans-serif;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+#contentContainer #content #tabContainer .tabLink.selected {
+  color: #fff;
+  border-bottom: 4px solid #fff;
+  font-weight: bold;
+}
+#contentContainer #content .command {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  font-family: 'Roboto-Regular', sans-serif;
+  box-shadow: inset 0 6px 9px -7px rgba(0, 0, 0, 0.7);
+}
+#contentContainer #content .command form {
+  text-align: left;
+}
+#contentContainer #content .command form label {
+  display: block;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.54);
+  margin-top: 20px;
+}
+#contentContainer #content .command form input {
+  height: 2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.87);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+  outline: 0;
+  width: 100%;
+  padding: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: inherit;
+  background-image: none;
+}
+#contentContainer #content .command form input:focus {
+  border-color: #2196F3;
+  border-width: 2px;
+  height: calc(2rem + 1px);
+  margin-bottom: -1px;
+}
+#contentContainer #content .command form select {
+  display: block;
+  height: 2rem;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNiIgd2lkdGg9IjEwIj48cG9seWdvbiBwb2ludHM9IjAsMCAxMCwwIDUsNiIgc3R5bGU9ImZpbGw6cmdiYSgwLDAsMCwuMjQpOyIvPjwvc3ZnPg==);
+  background-repeat: no-repeat;
+  background-position: right center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: inherit;
+  padding: 0 1.563rem 0 0;
+}
+#contentContainer #content .command form select:focus {
+  outline: 0;
+  height: calc(2rem + 1px);
+  margin-bottom: -1px;
+  border-color: #2196F3;
+  border-width: 2px;
+}
+#contentContainer #content .command .responseBox {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin: 10px 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+}
+#contentContainer #content .command .databaseListContainer {
+  width: 100%;
+}
+#contentContainer #content .command .databaseListContainer .databaseListTitleContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#contentContainer #content .command .databaseListContainer .databaseListTitleContainer .databaseListTitle {
+  line-height: 36px;
+}
+#contentContainer #content .command .databaseListContainer .databaseListTitleContainer .updateDatabaseButton {
+  margin: 0;
+}
+#contentContainer #content .command .databaseListContainer .databaseList {
+  width: 100%;
+  margin-top: 15px;
+  text-align: left;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listHeader {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding-right: 17px;
+  box-sizing: border-box;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listHeader span {
+  float: left;
+  color: rgba(0, 0, 0, 0.54);
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listHeader #authorId {
+  width: 10%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listHeader #authorName {
+  width: 40%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listHeader #authorBooks {
+  width: 50%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listHeader #bookId {
+  width: 10%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listHeader #bookTitle {
+  width: 30%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listHeader #bookAuthor {
+  width: 30%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listHeader #bookIsbn {
+  width: 30%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listContent {
+  width: 100%;
+  height: 250px;
+  overflow-y: scroll;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listContent .databaseRow {
+  width: 100%;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listContent .databaseRow span {
+  float: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 2px;
+  box-sizing: border-box;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listContent .databaseRow .authorId {
+  width: 10%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listContent .databaseRow .authorName {
+  width: 40%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listContent .databaseRow .authorBooks {
+  width: 50%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listContent .databaseRow .bookId {
+  width: 10%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listContent .databaseRow .bookTitle {
+  width: 30%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listContent .databaseRow .bookAuthor {
+  width: 30%;
+}
+#contentContainer #content .command .databaseListContainer .databaseList .listContent .databaseRow .bookIsbn {
+  width: 30%;
+}
+#footer {
+  width: 100%;
+  margin-top: 80px;
+  background: #303C42;
+  color: #cfd8dc;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Roboto-Regular', sans-serif;
+}
+#footer .column {
+  width: 100%;
+  /* visited link */
+  /* mouse over link */
+  /* selected link */
+}
+#footer .column:last-child {
+  margin-top: 20px;
+}
+#footer .column h1 {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0 0 8px;
+  color: #fff;
+}
+#footer .column p {
+  font-size: 14px;
+  line-height: 20px;
+}
+#footer .column b {
+  font-weight: bold;
+}
+#footer .column a:link {
+  color: #fff;
+}
+#footer .column a:visited {
+  color: #fff;
+}
+#footer .column a:hover {
+  color: #fff;
+}
+#footer .column a:active {
+  color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  #footer {
+    flex-direction: row;
+  }
+  #footer .column {
+    width: 45%;
+  }
+  #footer .column:last-child {
+    margin-top: 0;
+  }
+}

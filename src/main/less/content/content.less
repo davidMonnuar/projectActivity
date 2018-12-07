@@ -1,0 +1,245 @@
+
+#contentContainer {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 20px;
+  #content {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+
+    #tabContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      background-color: #006064;
+
+      .tabLink {
+        box-sizing: border-box;
+        width: 50%;
+        height: 48px;
+        line-height: 48px;
+        color: #E1E2E1;
+        text-transform: uppercase;
+        font-family: 'Roboto-Regular', sans-serif;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+
+        &.selected {
+          color: #fff;
+          border-bottom: 4px solid #fff;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .command {
+      box-sizing: border-box;
+      width: 100%;
+      background-color: #fff;
+      padding: 20px;
+      font-family: 'Roboto-Regular', sans-serif;
+      box-shadow: inset 0 6px 9px -7px rgba(0,0,0,0.7);
+
+      form {
+        text-align: left;
+
+        label {
+          display: block;
+          width: 100%;
+          color: rgba(0, 0, 0, 0.54);
+          margin-top: 20px;
+        }
+
+        input {
+          height: 2rem;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          display: block;
+          background-color: transparent;
+          color: rgba(0, 0, 0, .87);
+          border: none;
+          border-bottom: 1px solid rgba(0, 0, 0, .26);
+          outline: 0;
+          width: 100%;
+          padding: 0;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          border-radius: 0;
+          font-size: 1rem;
+          font-family: inherit;
+          line-height: inherit;
+          background-image: none;
+
+          &:focus {
+            border-color: #2196F3;
+            border-width: 2px;
+            height: calc(2rem + 1px);
+            margin-bottom: -1px;
+          }
+        }
+
+        select {
+          display: block;
+          height: 2rem;
+          width: 100%;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          outline: 0;
+          border: none;
+          border-bottom: 1px solid rgba(0, 0, 0, .26);
+          border-radius: 0;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          background-color: transparent;
+          background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNiIgd2lkdGg9IjEwIj48cG9seWdvbiBwb2ludHM9IjAsMCAxMCwwIDUsNiIgc3R5bGU9ImZpbGw6cmdiYSgwLDAsMCwuMjQpOyIvPjwvc3ZnPg==);
+          background-repeat: no-repeat;
+          background-position: right center;
+          cursor: pointer;
+          color: rgba(0, 0, 0, .87);
+          font-size: 1rem;
+          font-family: inherit;
+          line-height: inherit;
+          padding: 0 1.563rem 0 0;
+
+          &:focus {
+            outline: 0;
+            height: calc(2rem + 1px);
+            margin-bottom: -1px;
+            border-color: #2196F3;
+            border-width: 2px;
+          }
+        }
+      }
+
+      .responseBox {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        margin: 10px 0;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.54);
+      }
+
+      .databaseListContainer {
+        width: 100%;
+
+        .databaseListTitleContainer {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .databaseListTitle {
+            line-height: 36px;
+          }
+
+          .updateDatabaseButton {
+            margin: 0;
+          }
+        }
+
+        .databaseList {
+          width: 100%;
+          margin-top: 15px;
+          text-align: left;
+
+          .listHeader {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            padding-right: 17px;
+            box-sizing: border-box;
+
+            span {
+              float: left;
+              color: rgba(0, 0, 0, .54);
+            }
+
+            #authorId {
+              width: 10%;
+            }
+
+            #authorName {
+              width: 40%;
+            }
+
+            #authorBooks {
+              width: 50%;
+            }
+
+            #bookId {
+              width: 10%;
+            }
+
+            #bookTitle {
+              width: 30%;
+            }
+
+            #bookAuthor {
+              width: 30%;
+            }
+
+            #bookIsbn {
+              width: 30%;
+            }
+          }
+
+          .listContent {
+            width: 100%;
+            height: 250px;
+            overflow-y: scroll;
+
+            .databaseRow {
+              width: 100%;
+              height: 28px;
+              line-height: 28px;
+              font-size: 14px;
+              
+              span {
+                float: left;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                padding-right: 2px;
+                box-sizing: border-box;
+              }
+
+              .authorId {
+                width: 10%;
+              }
+
+              .authorName {
+                width: 40%;
+              }
+
+              .authorBooks {
+                width: 50%;
+              }
+
+              .bookId {
+                width: 10%;
+              }
+
+              .bookTitle {
+                width: 30%;
+              }
+
+              .bookAuthor {
+                width: 30%;
+              }
+
+              .bookIsbn {
+                width: 30%;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Demo Application</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.demoLibrary.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div id="header">
+    <span>Library Web App</span>
+    <div id="resetButton" class="button">Reset</div>
+</div>
+<div id="hostnameInfoContainer">
+    <span id="hostnameInfo">
+        <h3>Hostname info</h3>
+        <span id="hostnameValue"></span>
+    </span>
+</div>
+<div id="contentContainer">
+    <div id="content">
+        <div id="tabContainer">
+            <span id="addAuthorButton" class="tabLink selected">Add Author</span>
+            <span id="addBookButton" class="tabLink">Add Book</span>
+        </div>
+        <div id="addAuthor" class="command">
+            <form id="addAuthorForm" class="form">
+                <p>
+                    <label><b>Name</b></label>
+                    <input name="name" type="text">
+                </p>
+                <p>
+                <div id="addAuthorSubmitButton" class="button">Add</div>
+                </p>
+            </form>
+            <div id="authorResponseBox" class="responseBox"></div>
+            <div id="authorDatabaseListContainer" class="databaseListContainer">
+                <div class="databaseListTitleContainer">
+                    <h3 class="databaseListTitle">Authors Database</h3>
+                    <div id="updateAuthorDatabaseButton" class="updateDatabaseButton button">Refresh</div>
+                </div>
+                <div id="authorDatabaseList" class="databaseList">
+                    <div class="listHeader">
+                        <span id="authorId">Id</span>
+                        <span id="authorName">Name</span>
+                        <span id="authorBooks">Books</span>
+                    </div>
+                    <div id="authorListContent" class="listContent"></div>
+                </div>
+            </div>
+        </div>
+        <div id="addBook" class="command" style="display:none">
+            <form id="addBookForm" class="form">
+                <p>
+                    <label><b>Title</b></label>
+                    <input name="title" type="text">
+                    <label><b>ISBN</b></label>
+                    <input name="isbn" type="text">
+                    <label><b>Author</b></label>
+                    <select id="authorsSelect" name="author"></select>
+                </p>
+                <p>
+                <div id="addBookSubmitButton" class="button">Add</div>
+                </p>
+            </form>
+            <div id="bookResponseBox" class="responseBox"></div>
+            <div id="bookDatabaseListContainer" class="databaseListContainer">
+                <div class="databaseListTitleContainer">
+                    <h3 class="databaseListTitle">Books Database</h3>
+                    <div id="updateBookDatabaseButton" class="updateDatabaseButton button">Refresh</div>
+                </div>
+                <div id="bookDatabaseList" class="databaseList">
+                    <div class="listHeader">
+                        <span id="bookId">ID</span>
+                        <span id="bookTitle">Title</span>
+                        <span id="bookAuthor">Author</span>
+                        <span id="bookIsbn">ISBN</span>
+                    </div>
+                    <div id="bookListContent" class="listContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="column">
+        <h1>About this project</h1>
+        <p>This dummy application is a part of a project activity based on topics treated by Infrastructures for Cloud Computing and Big Data course
+            teached by Prof. Antonio Corradi at University of Bologna.<br>
+            The project activity is the result of a collaboration with the company Imola Informatica S.p.a. set in Imola, Italy.<br>
+            This application has been developed in order to be run, for testing, on environments with containerization features such as Docker,
+            Kubernetes and Openshift.
+        </p>
+    </div>
+    <div class="column">
+        <h1>About me</h1>
+        <p>I'm Dmitrij David Padalino Montenero, student of Master's Degree in Computer Engineering at University of Bologna.<br>
+            <b>Contact:</b> <a href="https://linkedin.com/in/dmitrijpadalino" target="_blank">Linkedin</a>
+        </p>
+    </div>
+
+</footer>
+<script async src="js/app.librarydemo.js"></script>
+</body>
+</html>
