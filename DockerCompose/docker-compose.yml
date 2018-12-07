@@ -1,0 +1,54 @@
+version: "3"
+services:
+  mysqldb:
+   image: mysql:latest
+   volumes:
+     - my-datavolume:/var/lib/mysql
+   deploy: 
+     placement:
+       constraints: [node.role == manager]
+   environment:
+     - MYSQL_ROOT_PASSWORD=password
+     - MYSQL_DATABASE=db_example
+     - MYSQL_USER=springuser
+     - MYSQL_PASSWORD=mysql2019
+   networks: 
+      - webnet
+  spring:
+    image: davidmonnuar/springbootlibrarydemo:1.0
+    depends_on:
+      - mysqldb
+    deploy:
+      replicas: 5
+      restart_policy: 
+        condition: on-failure 
+      resources: 
+        limits: 
+          cpus: "0.15" 
+          memory: 500M 
+    ports:
+      - "80:8080"
+    environment:
+      - DATABASE_DRIVER=com.mysql.jdbc.Driver
+      - DATABASE_HOST=mysqldb
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=db_example
+      - DATABASE_USER=springuser
+      - DATABASE_PASSWORD=mysql2019
+    networks: 
+      - webnet
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - webnet
+volumes:
+  my-datavolume:
+networks:
+  webnet:  
