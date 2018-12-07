@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring
+  labels:
+    app: spring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring
+  template:
+    metadata:
+      labels:
+        app: spring
+    spec:
+      containers:
+      - name: spring
+        image: davidmonnuar/springbootlibrarydemo:1.0
+        env:
+        - name: DATABASE_DRIVER
+          value: com.mysql.jdbc.Driver
+        - name: DATABASE_HOST
+          value: mysqldb
+        - name: DATABASE_PORT
+          value: "3306"
+        - name: DATABASE_NAME
+          value: db_example
+        - name: DATABASE_USER
+          value: springuser
+        - name: DATABASE_PASSWORD
+          value: mysql2019
+        ports:
+        - containerPort: 8080
+        
